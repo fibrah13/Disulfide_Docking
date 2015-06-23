@@ -16,4 +16,10 @@ foreach my $file (@docking_ligands) {
   system("cp $file data/ligands/pdbqts");
 }
 
+my @docking_jsons = glob("../OldStuff/Vina_disulfide/GSHgSG/dbs/*.json");
+
+foreach my $file (@docking_jsons) {
+  path("data/ligands/jsons")->mkpath;
+  system("cp $file data/ligands/jsons");
+}
 
